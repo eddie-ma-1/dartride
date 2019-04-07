@@ -19,6 +19,7 @@
                 
 
                 $(document).ready(function(){
+                    document.getElementById("postSuccessAlert").style.display = "none";
                     $(".dropdown-pickup a").click(function()
                     {
                         $(".pickup:first-child").text($(this).text());
@@ -78,7 +79,9 @@
                         url = url.replace(/%2C/g, ",");
 
                         $.post(url, data, function(result, status){
-                            alert("Data: " + result + "\nStatus: " + status);
+                            // alert("Data: " + result + "\nStatus: " + status);
+                            console.log("Data: " + result + "\nStatus: " + status)
+                            document.getElementById("postSuccessAlert").style.display = "block";
                         });
                         console.log(url)
 
@@ -86,24 +89,21 @@
                     });
 
                 });
-            
-
-
         </script>
     </head>
     <body>
 
     <!-- BEGIN_ITEMS -->
     <nav class="navbar navbar-expand-md navbar-dark border" style="background-color: #002b24;">
-            <a class="navbar-brand" href="/">Dartmouth Saferides</a>
-            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse active" id="logout">
-                
-            </div>
+        <a class="navbar-brand" href="/">DartRide</a>
     </nav>
     <main class="container p-5">
+        <div style="display: none" id="postSuccessAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+            Request successfuly submitted! :)
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <form class="rider-form">
             <div class="form-group">
                 <div id="q12" class="form-group">
@@ -155,7 +155,7 @@
                             <div class="dropdown-menu dropdown-dropoff" aria-labelledby="dropoff">
                                 <a class="dropdown-item" value = "Judge Hall">Judge Hall</a>
                                 <a class="dropdown-item" value = "French Hall">French Hall</a>
-                                <a class="dropdown-item" value = "Fahey Mclane">Fahey/Mclane</a>
+                                <a class="dropdown-item" value = "Fahey McLane">Fahey/McLane</a>
                                 <a class="dropdown-item" value = "Russell Sage">Russell Sage</a>
                                 <a class="dropdown-item" value = "Baker Library">Baker Library</a>
                                 <a class="dropdown-item" value = "Zimmerman Hall">Zimmerman Hall</a>

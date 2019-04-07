@@ -1,0 +1,77 @@
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.half-table
+{
+    table-layout: fixed;
+    width: 100%;
+    padding-top: 0px;
+    text-align: center;
+    /*margin-right: 200px;*/
+    /*margin-left: 200px;*/
+}
+
+td
+{
+    vertical-align: middle!important;
+}
+
+.half-width
+{
+    float: left;
+    width: 50%;
+}
+
+.circle-button
+{
+    border-radius:50%;
+    font-size: 17px;
+    height: 38px;
+    width: 38px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    line-height: 10px;
+}
+
+.task-button
+{
+    width: 175px !important; 
+}
+
+.logout
+{
+    width: 25%;
+}
+
+/* .rider-form
+{ 
+    /* display: inline-block; 
+} */
+
+/* .rider-form.form-control
+{
+    width: 100% !important;
+} */
